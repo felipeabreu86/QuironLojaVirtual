@@ -1,0 +1,45 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - Quiron Loja Virtual</title>
+
+    @*
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/ErroEstilo.css" rel="stylesheet" />
+        
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    *@
+
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="navbar navbar-inverse col-xs-12" role="navigation">
+        <a class="navbar-brand" href="#">Quiron Loja Virtual - Seu esporte é aqui</a>
+        @Html.Action("Resumo", "Carrinho")
+    </div>
+
+    <div class="row painel">
+        <div id="categoria" class="col-xs-3">
+            @Html.Action("Menu", "Categoria")
+        </div>
+
+        <div id="categoria" class="col-xs-8">
+            @RenderBody()
+        </div>
+    </div>
+    
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    @RenderSection("scripts", required: false)
+</body>
+</html>
