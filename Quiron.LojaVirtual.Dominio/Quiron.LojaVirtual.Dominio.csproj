@@ -98,6 +98,7 @@
     <Compile Include="Entidades\Vitrine\ClubesNacionais.cs" />
     <Compile Include="Entidades\Vitrine\Clubes.cs" />
     <Compile Include="Entidades\Vitrine\MarcaVitrine.cs" />
+    <Compile Include="Entidades\Vitrine\ProdutoVitrine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\CategoriaRepositorio.cs" />
     <Compile Include="Repositorio\EfDbContext.cs" />

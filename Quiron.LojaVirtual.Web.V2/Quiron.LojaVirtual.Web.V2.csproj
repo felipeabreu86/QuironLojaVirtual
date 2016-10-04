@@ -115,7 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -124,10 +123,12 @@
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\StringHelpers.cs" />
+    <Compile Include="Models\ProdutosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +196,19 @@
     <Content Include="img\items\8.png" />
     <Content Include="img\items\9.png" />
     <Content Include="img\main-back.png" />
+    <Content Include="img\marcas\adidas.jpg" />
+    <Content Include="img\marcas\asics.jpg" />
+    <Content Include="img\marcas\caloi.jpg" />
+    <Content Include="img\marcas\fila.jpg" />
+    <Content Include="img\marcas\mizuno.jpg" />
+    <Content Include="img\marcas\nike.jpg" />
+    <Content Include="img\marcas\oakley.jpg" />
+    <Content Include="img\marcas\olympikus.jpg" />
+    <Content Include="img\marcas\penalty.jpg" />
+    <Content Include="img\marcas\puma.jpg" />
+    <Content Include="img\marcas\reebok.jpg" />
+    <Content Include="img\marcas\topper.jpg" />
+    <Content Include="img\marcas\umbro.jpg" />
     <Content Include="img\sep.png" />
     <Content Include="img\slider\1.png" />
     <Content Include="img\slider\2.png" />
@@ -252,6 +266,8 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_Marcas.cshtml" />
+    <Content Include="Views\Nav\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Quiron.LojaVirtual.Dominio\Quiron.LojaVirtual.Dominio.csproj">
