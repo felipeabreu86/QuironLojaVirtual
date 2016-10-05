@@ -26,7 +26,7 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         }
 
         /// <summary>
-        /// 
+        ///     Retorna os Clubes Nacionais ordenados pela descrição
         /// </summary>
         /// <returns></returns>
         public IEnumerable<ClubesNacionais> ObterClubesNacionais()
@@ -35,12 +35,21 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         }
 
         /// <summary>
-        /// 
+        ///     Retornar os clubes internacionais ordenados pela descrição
         /// </summary>
         /// <returns></returns>
         public IEnumerable<ClubesInternacionais> ObterClubesInternacionais()
         {
             return _context.ClubesInternacionais.OrderBy(i => i.LinhaDescricao);
+        }
+
+        /// <summary>
+        ///     Retornar os gêneros ordenados pela descrição
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Genero> ObterGeneros()
+        {
+            return _context.Generos.OrderBy(g => g.GeneroDescricao);
         }
     }
 }
