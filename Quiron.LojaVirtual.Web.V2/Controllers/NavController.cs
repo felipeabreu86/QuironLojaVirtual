@@ -44,11 +44,7 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
             _model = new ProdutosViewModel { Produtos = produtos, Titulo = genero };
             return View("Navegacao", _model);
         }
-
-
-
-
-
+        
         #region [Tenis por Categoria]
 
         /// <summary>
@@ -71,8 +67,6 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
             return PartialView("_TenisCategoria", model);
         }
 
-
-
         /// <summary>
         /// Retorna uma vitrine com tenis por categoria
         /// </summary>
@@ -87,19 +81,12 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
             var produtos = _repositorio.ObterProdutosVitrine(categoriaCodigo, subgrupo: subGrupoCodigo);
             _model = new ProdutosViewModel { Produtos = produtos, Titulo = categoriaDescricao.UpperCaseFirst() };
             return View("Navegacao", _model);
-
         }
-
-
 
         #endregion
 
-
-
-
         #region [Casual]
-
-
+        
         /// <summary>
         /// Obte modalidades de casual exibido no Menu
         /// </summary>
@@ -121,9 +108,7 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
 
             return PartialView("_CasualSubGrupo", model);
         }
-
-
-
+        
         [Route("{modalidadeCodigo}/casual/{subGrupoCodigo}/{subGrupoDescricao}")]
         public ActionResult ObterModalidadeSubGrupo(string modalidadeCodigo
             , string subGrupoCodigo, string subGrupoDescricao)
@@ -143,11 +128,8 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
 
         #endregion
 
-
         #region [ Suplementos ]
-
-
-
+        
         /// <summary>
         /// Obtem suplementos
         /// </summary>
@@ -170,10 +152,6 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
             return PartialView("_Suplementos", model);
         }
 
-
-
-
-
         [Route("{categoriaCodigo}/suplementos/{subGrupoCodigo}/{subGrupoDescricao}")]
         public ActionResult ObterCategoriaSubGrupos(string categoriaCodigo, string subGrupoCodigo, string subGrupoDescricao)
         {
@@ -181,9 +159,7 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
             var produtos = _repositorio.ObterProdutosVitrine(categoriaCodigo, subgrupo: subGrupoCodigo);
             _model = new ProdutosViewModel { Produtos = produtos, Titulo = subGrupoDescricao.UpperCaseFirst() };
             return View("Navegacao", _model);
-
         }
-
 
         #endregion
 
@@ -198,14 +174,9 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
                 Produtos = produtos,
                 Titulo = termo.UpperCaseFirst()
             };
-                return View("Navegacao", _model);
+            return View("Navegacao", _model);
         }
 
-
-
         #endregion [ Consulta ]
-
-    }
-
-  
+    }  
 }
