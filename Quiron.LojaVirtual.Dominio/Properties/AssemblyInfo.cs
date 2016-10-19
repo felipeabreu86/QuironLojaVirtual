@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Quiron.LojaVirtual.Dominio")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Accenture")]
+[assembly: AssemblyCompany("Felipe")]
 [assembly: AssemblyProduct("Quiron.LojaVirtual.Dominio")]
-[assembly: AssemblyCopyright("Copyright © Accenture 2016")]
+[assembly: AssemblyCopyright("Copyright © Felipe 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
